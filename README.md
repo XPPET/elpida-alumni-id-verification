@@ -1,16 +1,37 @@
-# React + Vite
+# 🎓 Elpida Alumni Digital ID Engine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application designed for the **Elpida Schools Alumni Association** to generate and verify digital identity cards for its members.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Real-time Preview:** Instant visualization of the ID card as data is entered.
+- **Photo Integration:** Support for member profile photo uploads.
+- **Smart Verification:** Automated member validation against a CSV database.
+- **Admin Override:** Manual authorization system for special board members.
+- **Dynamic QR Codes:** Each card features a unique QR code containing member metadata.
+- **High-Resolution Export:** Download identities as high-quality PNG files ready for print or mobile use.
 
-## React Compiler
+## 🛡️ Administrative Guide
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+For data integrity and security, database updates and special verifications are protected by specific protocols.
 
-## Expanding the ESLint configuration
+### 📥 Updating the Member Database
+1. Click the **Update Database** button in the top-right corner.
+2. Enter the Admin Password: `Olympiakos7@`.
+3. Select your updated member CSV file (Structure: Surname, First Name, Email).
+4. The system securely stores the data locally in the browser's storage for the current device.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🔑 Manual Verification (Admin Override)
+To issue a **Verified** identity for VIPs or members not yet in the database:
+- In the **Email / Admin Code** field, type: `ADMIN_ELPIDA`.
+- This bypasses the CSV check and activates the "Verified" badge.
+
+## 🚀 Tech Stack
+
+- **React.js** (Frontend Framework)
+- **Tailwind CSS** (Modern Styling)
+- **Lucide React** (Professional Icon Set)
+- **html-to-image** (High-fidelity image rendering)
+
+---
+Designed & Developed for the **Alumni Association of Elpida Schools**.
