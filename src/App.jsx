@@ -122,7 +122,7 @@ function App() {
           <input type="text" placeholder="Email" className="w-full bg-slate-50 p-4 rounded-xl border" onChange={(e) => setEmail(e.target.value)} />
           <div className="grid grid-cols-2 gap-4">
             <select className="p-4 bg-slate-50 rounded-xl border font-bold" onChange={(e) => setYear(e.target.value)}>
-              {Array.from({ length: 47 }, (_, i) => 2026 - i).map(y => <option key={y} value={y}>{y}</option>)}
+              {Array.from({ length: new Date().getFullYear() - 2015 + 1 }, (_, i) => new Date().getFullYear() - i).map(y => <option key={y} value={y}>{y}</option>)}
             </select>
             <select className="p-4 bg-slate-50 rounded-xl border font-bold" onChange={(e) => setMemberType(e.target.value)}>
               <option>Μέλος</option><option>Πρόεδρος</option><option>Αντιπρόεδρος</option><option>Ταμίας</option><option>Γραμματέας</option><option>Επίτιμο Μέλος</option>
